@@ -1,9 +1,9 @@
 <template>
-  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <svg v-if="icon" class="icon" aria-hidden="true">
-      <use :xlink:href="`#icon-${icon}`" />
+  <button class="g-button"  :class="{ [`icon-${iconPosition}`]: true }"  @click="$emit('click')">
+    <svg v-if="icon&&!loading" class="icon"  aria-hidden="true" >
+      <use :xlink:href=`#icon-${icon}` />
     </svg>
-    <svg class="loading" aria-hidden="true">
+    <svg v-if="loading" class="loading icon" aria-hidden="true" >
       <use xlink:href='#icon-loading'>
     </svg>
     <div class='slot'>
@@ -71,6 +71,10 @@ export default {
   // props:['icon']
   props: {
     icon: {},
+    loading:{
+      type:Boolean,
+      default:false,
+    },
     iconPosition: {
       type: String,
       default: "left",
