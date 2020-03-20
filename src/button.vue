@@ -3,6 +3,9 @@
     <svg v-if="icon" class="icon" aria-hidden="true">
       <use :xlink:href="`#icon-${icon}`" />
     </svg>
+    <svg class="loading" aria-hidden="true">
+      <use xlink:href='#icon-loading'>
+    </svg>
     <div class='slot'>
       <slot></slot>
     </div>
@@ -47,6 +50,20 @@
 }
 .g-button:focus {
   outline: none;
+}
+
+.loading {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  margin-right: .3em;
+  animation: loading 2s linear infinite;
+}
+@keyframes loading{
+  0%{ transform: rotate(0deg);}
+  100%{ transform: rotate(360deg);}
 }
 </style>
 <script>
