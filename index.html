@@ -36,14 +36,16 @@
 
 <body>
     <div id='app'>
-        <g-input value='nihao' disabled></g-input>
+        <!-- <g-input value='nihao' disabled></g-input>
         <g-input value='haohaohao' readonly></g-input>
         <div class="box">
             <g-input value='buhao' error='可能有点问题'></g-input>
-        </div>
+            
+        </div> -->
         
-        <g-input value='buhao'></g-input>
-
+        <g-input  v-model.lazy='message' ></g-input>
+        <p>{{message}}</p>
+       
         <div>
             <g-button icon='settings' :loading='loading1' @click='loading1 = !loading1'>
                 按钮

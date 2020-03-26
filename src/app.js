@@ -13,5 +13,13 @@ new Vue({
         loading1:true,
         loading2:true,
         loading3:true,
-    }
+        message:'123',
+    },
+    methods:{
+        inputChange(e){
+            // this.number+=1
+            
+        },
+    },
+    
 })
