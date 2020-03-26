@@ -3,7 +3,16 @@
     <slot></slot>
   </div>
 </template>
-<style>
+
+<script>
+    export default{
+        mounted(){
+            console.log(1)
+        }
+    }
+</script>
+
+<style scoped>
 .g-button-group {
   display: inline-flex;
   vertical-align: middle;
@@ -14,7 +23,6 @@
 
 .g-button-group > .g-button:hover{
     z-index: 1;
-
 }
 
 .g-button-group > .g-button:first-child {
@@ -27,11 +35,3 @@
   margin-left:-1px;
 }
 </style>
-
-<script>
-    export default{
-        mounted(){
-            console.log(1)
-        }
-    }
-</script>

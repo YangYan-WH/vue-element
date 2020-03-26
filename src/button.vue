@@ -11,8 +11,26 @@
     </div>
   </button>
 </template>
-
-<style lang='scss'>
+<script>
+export default {
+  props: {
+    icon: {},
+    loading:{
+      type:Boolean,
+      default:false,
+    },
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        console.log(value)
+        return value === 'left' || value === 'right'
+      }
+    }
+  }
+};
+</script>
+<style lang='scss' scoped>
 .g-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -66,23 +84,4 @@
   100%{ transform: rotate(360deg);}
 }
 </style>
-<script>
-export default {
-  // props:['icon']
-  props: {
-    icon: {},
-    loading:{
-      type:Boolean,
-      default:false,
-    },
-    iconPosition: {
-      type: String,
-      default: "left",
-      validator(value) {
-        console.log(value)
-        return value === 'left' || value === 'right'
-      }
-    }
-  }
-};
-</script>
+
