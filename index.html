@@ -36,15 +36,46 @@
 
 <body>
     <div id='app'>
-        <!-- <g-input value='nihao' disabled></g-input>
+
+        <g-row>
+            <g-col></g-col>
+            <g-col></g-col>
+        </g-row>
+
+        <g-row>
+            <g-col></g-col>
+            <g-col></g-col>
+            <g-col></g-col>
+
+        </g-row>
+
+        <g-row>
+            <g-col></g-col>
+            <g-col></g-col>
+            <g-col></g-col>
+            <g-col></g-col>
+        </g-row>
+        <g-row>
+            <g-col span=2></g-col>
+            <g-col span=22></g-col>
+        </g-row>
+
+        <g-row>
+            <g-col span=2></g-col>
+            <g-col span=20 offset=2></g-col>
+        </g-row>
+
+        
+
+        <hr/>
+        <g-input value='nihao' disabled></g-input>
         <g-input value='haohaohao' readonly></g-input>
         <div class="box">
             <g-input value='buhao' error='可能有点问题'></g-input>
             
-        </div> -->
+        </div>
         
         <g-input  v-model.lazy='message' ></g-input>
-        <p>{{message}}</p>
        
         <div>
             <g-button icon='settings' :loading='loading1' @click='loading1 = !loading1'>
