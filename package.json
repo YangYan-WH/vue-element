@@ -21,9 +21,9 @@
   "homepage": "https://github.com/YangYan-WH/vue-element#readme",
   "dependencies": {
     "g": "^2.0.1",
-    "parcel": "^1.12.4",
+    "parcel": "^2.8.2",
     "vue": "^2.6.11",
-    "vue-loader": "^15.9.0"
+    "vue-loader": "^17.0.1"
   },
   "devDependencies": {
     "sass": "^1.26.3",
